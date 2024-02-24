@@ -98,8 +98,6 @@ trait RdTrait {
       foreach($errors as $key => $error){
         $this->assignArrayByPath($errors_array, $key, $error);
       }
-
-      dd($errors_array);
       
       throw new DetailedException('Data Validation Error', 403, null, $errors_array);
     }
